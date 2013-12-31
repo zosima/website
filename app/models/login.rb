@@ -28,7 +28,9 @@ class Login < ActiveRecord::Base
   end
 
   def generate_token
-    tokens << Token.generate
+    ret = Token.generate
+    tokens << ret
     save!
+    ret
   end
 end
