@@ -15,7 +15,3 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-
-function signinCallback(authResult) {
-  console.log(authResult);
-}
