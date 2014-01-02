@@ -2,7 +2,7 @@ class Api::LoginsController < ApplicationController
   protect_from_forgery with: :null_session
 
   include ApiAuth
-  before_action :check_authentication, :only => [:echo]
+  before_action :check_authentication, :except => [:create, :destroy]
 
   def create
     unless params[:access_token]
@@ -37,9 +37,12 @@ class Api::LoginsController < ApplicationController
     head :ok
   end
 
-  def echo
+  def current
     render :json => {
-      :message => "Hello #{@current_user.google_id}!"
+      :id => @current_user.google_id,
+      :display_name => @current_user.display_name,
+      :url => @current_user.url,
+      :image_url => @current_user.image_url,
     }
   end
 end

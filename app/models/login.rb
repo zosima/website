@@ -23,6 +23,10 @@ class Login < ActiveRecord::Base
 
     ret = Login.new
     ret.google_id = result.id
+    ret.image_url = result.image.url
+    ret.display_name = result.display_name
+    ret.url = result.url
+
     ret.save!
     return ret
   end

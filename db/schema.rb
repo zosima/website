@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131231053337) do
+ActiveRecord::Schema.define(version: 20140102040101) do
 
   create_table "logins", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "google_id"
+    t.string   "image_url"
+    t.string   "display_name"
+    t.string   "url"
   end
 
   create_table "tokens", force: true do |t|

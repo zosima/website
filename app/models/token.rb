@@ -10,6 +10,8 @@ class Token < ActiveRecord::Base
 
   def self.get(id)
     t = Token.find_by_token_text id
+    return nil unless t
+
     if t.expired?
       t.destroy!
       return nil
