@@ -2,7 +2,7 @@ module ApiAuth
   extend ActiveSupport::Concern
 
   def check_authentication
-    t = Token.find_by_token_text params[:access_token]
+    t = Token.get params[:access_token]
     unless t
       head :unauthorized
       return false
