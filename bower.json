@@ -1,0 +1,19 @@
+{
+  "name": "Zosima",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zosima/website",
+  "authors": [
+    "Paul Betts <paul@paulbetts.org>"
+  ],
+  "description": "Home Automation that isn't annoying",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}

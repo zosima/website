@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require rxjs/rx
+//= require rxjs/rx.async
+//= require rxjs/rx.binding
+//= require Rx-jQuery/rx.jquery
 //= require_tree .
