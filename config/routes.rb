@@ -1,5 +1,6 @@
 Zosima::Application.routes.draw do
   namespace :api, :defaults => {:format => :json} do
+    get 'logins/echo'
     resources :logins
   end
 
